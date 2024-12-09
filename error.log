@@ -1,0 +1,2 @@
+niiRead(): error opening file /mnt/home/royseo/fsgroupAug11/bgbridge/sub-489fa121_mri_aparc+aseg2.nii.gz
+mri_read(): couldn't determine type of file /mnt/home/royseo/fsgroupAug11/bgbridge/sub-489fa121_copy/stats/aseg.stats
