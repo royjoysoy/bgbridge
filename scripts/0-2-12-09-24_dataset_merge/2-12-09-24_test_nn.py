@@ -226,7 +226,7 @@ def main():
     print(f"Using device: {device}")
     
     # Load data
-    df = pd.read_csv('/Users/test_terminal/Desktop/bgbridge/scripts/0-2-120924_dataset_merge/4-merged_aseg_lh_aparc-merged_rm_some_variables__transposed_rh_aparc_12_11_24.csv')
+    df = pd.read_csv('/Users/test_terminal/Desktop/bgbridge/scripts/0-2-12-09-24_dataset_merge/4-merged_aseg_lh_aparc-merged_rm_some_variables__transposed_rh_aparc_12_11_24.csv')
     
     # Prepare data
     train_loader, val_loader, test_loader, scaler = prepare_data(df)
