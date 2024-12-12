@@ -1,0 +1,416 @@
+V1_x,Study_ID,patientlist_ethnicbackground_v2_v2_x,patientlist_ethnicgroup_v2_v2_x,age_at_onset_v2_v2_x,syndrome_v2_v2_x,Age_x,Edu_x,FAS_total_raw_x,FAS_total_T_x,Animals_raw_x,Animals_T_x,BNT_totalwstim_raw_x,BNT_totalwstim_T_x,Handedness_x
+H2376119,00667fc3,Asian,Not Hispanic or Latino,2007,3,75,18,,,18,45,39,26,1
+H3705763,00798ad4,White,Not Hispanic or Latino,2012,3,65,18,62,63,22,51,55,41,1
+H4184787,017c5114,White,Not Hispanic or Latino,2014,1,71,15,42,51,7,17,39,28,1
+H4014679,019d2f13,Unavailable or Unknown,Unavailable or Unknown,2009,1,70,14,30,41,21,56,59,68,1
+H2499034,02ca2e65,White,Not Hispanic or Latino,2012,2,55,16,39,45,13,28,56,44,1
+H6683103,058aed19,White,Not Hispanic or Latino,,3,61,12,29,44,16,44,56,51,1
+H4772143,058dd28d,White,Not Hispanic or Latino,2014,2,59,14,26,38,17,46,58,60,1
+H3585040,05d9fbbb,White,Not Hispanic or Latino,2010,2,79,16,34,46,6,20,28,30,1
+H3847536,05ddd0a1,White,Not Hispanic or Latino,2011,1,92,20,32,,10,,47,,1
+H5868036,0669e28c,White,Not Hispanic or Latino,2009,1,69,16,33,40,14,36,47,38,1
+H3874966,066e65a7,White,Not Hispanic or Latino,2014,2,79,13,24,36,,,51,50,1
+H3714239,06db375c,White,Not Hispanic or Latino,2012,1,53,13,26,38,24,58,55,43,1
+H4320558,0793b7e7,White,Not Hispanic or Latino,2014,2,80,14,42,53,13,36,47,44,1
+H3625973,079ed216,White,Not Hispanic or Latino,2014,2,52,12,14,24,16,41,46,32,1
+H4093503,08d6e79c,Unavailable or Unknown,Unavailable or Unknown,2012,2,76,18,52,57,11,28,58,62,1
+H2475808,0a125d7c,Black or African American,Not Hispanic or Latino,2013,1,65,14,33,47,16,50,53,52,1
+H3694128,0afecd8c,White,Not Hispanic or Latino,2015,3,48,13,37,45,14.54252199,78,56,46,1
+H3914372,0d5f0893,White,Not Hispanic or Latino,2012,2,85,16,39,49,19,54,59,73,1
+H3833134,0d6d309f,Unavailable or Unknown,Hispanic or Latino,2013,2,68,18,33,38,11,26,53,39,1
+H3100991,0dd522cd,White,Not Hispanic or Latino,2011,1,82,16,64,70,22,57,56,56,1
+H3283209,0dd55b1f,White,Not Hispanic or Latino,2016,2,71,,55,60,14,35,48,36,1
+H3509914,0e846802,White,Not Hispanic or Latino,2014,2,78,12,22,37,11,34,52,51,1
+H2186662,0f17085c,White,Not Hispanic or Latino,2015,1,74,16,44,51,11,29,55,48,1
+H3742643,0faa1e0b,White,Not Hispanic or Latino,2010,2,70,18,,,,,,,1
+H3486882,1028325c,Black or African American,Not Hispanic or Latino,2011,2,72,18,53,63,6,26,56,55,1
+H3924185,10b569d0,White,Not Hispanic or Latino,,2,60,16,17,26,2,6,56,46,1
+H3761323,114354c8,White,Not Hispanic or Latino,2012,1,62,14,33,40,14,36,55,45,1
+H2331377,126b1378,White,Not Hispanic or Latino,2005,1,60,13,44,53,18,47,45,34,1
+H4846648,12eabf70,White,Not Hispanic or Latino,2016,2,64,12,23,35,23,60,52,45,1
+H3549662,1394c7f8,White,Not Hispanic or Latino,2006,1,86,22,30,,11,,,,1
+H4144086,13a18ee0,Declined to Answer,Declined to Answer,2016,1,68,17,,,,,58,59,1
+H3269000,13bd740c,White,Not Hispanic or Latino,2014,1,82,12,20,34,11,35,49,49,1
+H3846873,13c15d64,White,Not Hispanic or Latino,2013,2,78,15,22,34,12,36,52,47,1
+H3240944,13ec5994,White,Not Hispanic or Latino,2013,1,74,16,50,60,22,57,58,63,1
+H2638945,1491460a,White,Not Hispanic or Latino,2015,2,88,16,,,,,,,1
+H2124404,14fedfa3,White,Unavailable or Unknown,2009,2,59,11,27,41,12,35,57,55,1
+H3981927,150d84fb,White,Not Hispanic or Latino,2015,1,83,12,27,41,9,31,45,46,1
+H3336793,163ea025,Unavailable or Unknown,Unavailable or Unknown,2011,2,86,12,,,,,,,1
+H3988178,165588a2,Unavailable or Unknown,Unavailable or Unknown,2015,1,69,16,44,50,24,58,58,61,1
+H4184674,17805bd1,White,Not Hispanic or Latino,2010,1,66,16,,,,,55,44,1
+H2331304,180acdfd,Black or African American,Not Hispanic or Latino,2015,1,81,15.3828125,6,35,6,41,28,48,1
+H3960349,1867fd2c,Unavailable or Unknown,Unavailable or Unknown,2015,1,73,18,31,38,19,49,59,65,1
+H3635140,194d3093,White,Not Hispanic or Latino,2012,2,59,16,4,13,3,4,41,26,1
+H3733290,19fbad96,White,Not Hispanic or Latino,2013,1,66,13,27,38,16,43,55,48,1
+H3311079,1a23c48b,White,Not Hispanic or Latino,2010,3,59,16,65,67,17,42,57,50,1
+H2629874,1a79091e,White,Not Hispanic or Latino,2010,2,79,16,,,,,56,54,1
+H3906684,1a97ad79,Asian,Not Hispanic or Latino,2012,1,64,18,57,59,14.54252199,80,53,37,1
+H3953439,1ad1b4f0,White,Unavailable or Unknown,2015,3,48,18,48,51,20,43,59,55,1
+H1519737,1b907d1d,White,Not Hispanic or Latino,2013,1,73,16,,,,,60,75,1
+H4132511,1bc90004,Unavailable or Unknown,Unavailable or Unknown,2015,1,70,16,49,54,9,24,57,54,1
+H3999441,1c956955,White,Not-Hispanic,2014,2,78,16,22,33,7,18,47,42,1
+H3682925,1cee8c6f,White,Not Hispanic or Latino,2014,1,68,16,32,39,18,45,53,41,1
+H3832318,1dae63ba,Patient not Present,,2015,2,72,18,62,63,15,40,51,41,1
+H3629088,1f681faf,White,Not Hispanic or Latino,2014,3,69,20,56,60,16,39,55,40,1
+H3589792,1fb96cee,White,Not Hispanic or Latino,2004,2,81,12,,,,,,,1
+H3865962,1ff68e5a,White,Not Hispanic or Latino,2013,2,74,18,38,46,8,19,54,45,1
+H3576577,213c470a,White,Not Hispanic or Latino,2009,1,82,16,22,36,8,25,55,52,1
+H3824620,21428ed7,White,Not Hispanic or Latino,2005,2,67,12,16,28,10,27,51.44023324,22,1
+H6610526,21ba60e0,White,Not Hispanic or Latino,2013,3,77,16,52,60,21,57,59,69,1
+H2056627,2222a4ae,White,Not Hispanic or Latino,2012,1,75,14,36,47,17,50,58,66,1
+H2496340,229d237c,White,Not Hispanic or Latino,2009,2,66,11,27,40,9,27,53,47,1
+H4283004,2360dec8,Unavailable or Unknown,Unavailable or Unknown,2012,1,75,16,36,46,22,57,53,44,1
+H3898293,266d206c,Unavailable or Unknown,Unavailable or Unknown,2013,1,51,12,26,39,11,28,47,36,1
+H2847328,2724cf52,White,Not Hispanic or Latino,2013,2,61,14,,,,,58,61,1
+H8846547,279c7521,American Indian or Alaska Native,Not Hispanic or Latino,,1,62,14,,,,,58,61,1
+H2578661,287176c6,White,Not Hispanic or Latino,2015,1,57,13,48,56,18,47,52,45,1
+H3104146,2a2b5f3e,Asian,Not Hispanic or Latino,2011,2,66,16,23,34,13,33,39,24,1
+H3556963,2b30c14a,American Indian or Alaska Native,Not Hispanic or Latino,1996,2,73,11,24,37,12,38,32,34,1
+H3745000,2b4a0bd1,White,Not Hispanic or Latino,2013,2,84,16,30,43,,,,,1
+H4061064,2b8f4732,White,Not Hispanic or Latino,2015,2,68,19,37,42,17,44,50,33,1
+H3788274,2c37c3b5,White,Not Hispanic or Latino,2013,3,69,15,26,37,20,50,59,67,1
+H3608237,2d4efe17,White,Not Hispanic or Latino,2009,1,83,15.3828125,19,,8,,35,44,1
+H3338600,2dcc5dc5,Unavailable or Unknown,Unavailable or Unknown,2014,1,77,16,28,37,21,56,60,77,1
+H3521477,2e9e591f,White,Not Hispanic or Latino,2014,1,78,18,28,37,5,13,49,39,1
+H2517520,2eb15771,White,Declined to Answer,2000,1,77,18,21,30,17,47,54,47,1
+H8935831,2ecd61fa,White,Not Hispanic or Latino,2012,1,85,16,46,,10,,55,,1
+H5505620,2ee2b1f4,White,Not Hispanic or Latino,2017,2,87,18,25,33,11,31,,,1
+H3004754,2efce488,White,Not Hispanic or Latino,2014,1,63,16,28,35,16,39,51,39,1
+H4002923,2ffa5671,White,Not Hispanic or Latino,2014,1,81,18,38,47,18,47,56,53,1
+H4069772,3052d7d6,White,Unavailable or Unknown,2016,2,68,12,27,39,4,10,48,42,1
+H3019991,30b76f3e,White,Not Hispanic or Latino,2016,1,68,12,,,,,,,1
+H3859420,3146fec7,White,Not Hispanic or Latino,2011,2,90,10,,,,,53,,1
+H3177315,3210d317,White,Not Hispanic or Latino,2015,3,66,20,54,59,25,59,60,67,1
+H3203542,324796ae,White,Not Hispanic or Latino,2014,1,78,13,39,50,19,54,55,54,1
+H3879073,329f4656,White,Not Hispanic or Latino,2014,1,70,15,31,42,22,56,52,43,1
+H3270493,33c8faf4,White,Not Hispanic or Latino,2015,1,87,16,45,52,7,19,38,31,1
+H2644580,34ef4c8b,Asian,Not Hispanic or Latino,2012,1,65,12,46,57,14,39,33,29,1
+H4293537,35a45d04,Unavailable or Unknown,Unavailable or Unknown,2014,1,70,14,30,41,8,21,56,52,1
+H2207758,391ae2e4,Asian,Not Hispanic or Latino,2017,3,59,16,24,31,16,38,,,1
+H2453891,39c886e3,White,Not Hispanic or Latino,2004,2,54,9,,,,,51,44,1
+H3748038,3a1703af,White,Not Hispanic or Latino,2010,2,81,20,40,47,11,29,36,26,1
+H3297842,3b9aa244,White,Not Hispanic or Latino,2012,1,86,14,25,36,8,26,50,,1
+H2480385,3bc5e01f,White,Unavailable or Unknown,2008,1,74,18,41,46,16,40,46,34,1
+H3665260,3be913ce,White,Not Hispanic or Latino,2012,2,77,19,60,65,24,59,58,61,1
+H3277538,3c82801a,Declined to Answer,Declined to Answer,2013,1,62,18,45,50,17,43,54,40,1
+H2383334,3d47ebfa,White,Not Hispanic or Latino,2015,1,74,18,40,46,13,32,56,49,1
+H3479192,3d77bbd8,White,Not Hispanic or Latino,2010,2,85,10,9,43.46047478,4,-2.91,51.44023324,,1
+H3965402,3d94d21f,White,Not Hispanic or Latino,2012,1,61,16,31,40,12,32,42,26,1
+H3031982,3d971a9f,White,Not Hispanic or Latino,2017,1,83,12,30,45,10,31,47,49,1
+H9776978,3e415bb7,White,Unavailable or Unknown,2013,3,79,19,54,62,18,47,56,50,1
+H2581849,3e6d91b0,White,Not Hispanic or Latino,2003,2,56,16,,,,,,,1
+H3886125,3f3604ac,Unavailable or Unknown,Unavailable or Unknown,2012,1,68,16,64,68,15,40,53,41,1
+H8502210,3feeb85e,White,Not Hispanic or Latino,2007,1,73,20,49,53,19,48,55,42,1
+H3157047,406ed75b,White,Not Hispanic or Latino,2004,2,58,19,49,50,10,18,49,30,1
+H3759026,408fbe77,White,Not Hispanic or Latino,2013,2,76,12,34,47,11,33,52,50,1
+H3782792,40aa8ca9,Black or African American,Not Hispanic or Latino,2017,1,61,13,,,,,47,49,1
+H4185798,412aff4b,Declined to Answer,Not Hispanic or Latino,2012,2,79,16,30,48,9,39,51.44023324,37,1
+H3274877,420d7d2e,Unavailable or Unknown,Hispanic or Latino,2013,1,67,12,35,48,17,80,49,41,1
+H2647911,43aba6c0,White,Not Hispanic or Latino,2012,2,71,20,48,51,11,25,46,30,1
+H2330102,43b68479,White,Not-Hispanic,2010,3,58,18,38,45,17,42,60,66,1
+H2386745,455fd976,White,Not Hispanic or Latino,2013,1,79,19,31,40,6,17,31,27,1
+H3550867,46b086c9,White,Not Hispanic or Latino,2008,2,68,18,52,57,12,32,55,42,1
+H3724241,4745f122,White,Unavailable or Unknown,2012,1,77,20,14,21,14,37,57,52,1
+H3837408,49d6d0a5,White,Not Hispanic or Latino,2014,1,66,19,50,56,13,30,60,68,1
+H4300772,49fa21de,White,Hispanic or Latino,2010,2,60,9,,,,,55,48,1
+H3670462,4a62cf5f,Unavailable or Unknown,Unavailable or Unknown,2013,2,71,,25,37,12,37,45,41,1
+H3982421,4a64f58c,White,Not Hispanic or Latino,2016,2,80,18,32,41,11,31,51,44,1
+H3708238,4c151eaa,White,Not Hispanic or Latino,2010,3,48,16,67,69,25,56,60,66,1
+H3736144,4c4ac341,White,Not Hispanic or Latino,2016,1,61,,15,29,19,52,49,39,1
+H2105501,4c824b78,White,Not Hispanic or Latino,2016,3,61,16,53,58,33,74,58,58,1
+H3248527,4cdb9fde,White,Not Hispanic or Latino,2012,1,88,16,27,,13,,50,,1
+H3019879,4d1d418a,Asian,Not Hispanic or Latino,2016,2,73,16,48,54,4,8,29,28,1
+H3755404,4d65851f,White,Not Hispanic or Latino,2014,1,72,12,42,56,13,38,59,71,1
+H3833793,4d7ee134,White,Not Hispanic or Latino,2010,1,84,12,36,50,24,67,57,65,1
+H9475471,4effcb25,White,Not Hispanic or Latino,2015,2,67,12,,,,,55,50,1
+H3866745,4f562fbe,White,Not-Hispanic,2016,2,74,18,23,31,7,15,50,38,1
+H2536443,503c38d9,White,Not Hispanic or Latino,2011,1,56,14,26,38,15,40,54,43,1
+H3482674,508faca7,White,Not Hispanic or Latino,2015,1,68,12,18,32,14,40,55,50,1
+H3752043,50a910a4,White,Not Hispanic or Latino,2012,1,78,16,19,30,13,35,40,34,1
+H3774583,5133c830,White,Not Hispanic or Latino,2011,2,68,12,28,41,12,37,,,1
+H4187090,51a33457,White,Not-Hispanic,2014,2,83,12,16,30,6,23,39,38,1
+H3058414,51f5cfce,White,Not Hispanic or Latino,2010,3,72,16,32,40,18,45,57,54,1
+H3852417,5236f5b6,White,Unavailable or Unknown,2012,3,69,18,37,43,19,49,59,62,1
+H3386351,526fed7d,White,Not Hispanic or Latino,2014,2,75,19,34,41,4,6,51,41,1
+H3846627,53bb86f9,White,Not Hispanic or Latino,2015,2,68,14,30,41,20,51,60,75,1
+H4092445,53bc59bf,White,Not Hispanic or Latino,2015,1,80,16,46,55,6,18,55,51,1
+H2499925,548c507f,White,Not Hispanic or Latino,2005,3,62,20,,,,,56,42,1
+H2650177,548cd151,Asian,Not Hispanic or Latino,2015,1,83,16,25,36,6,21,,,1
+H3378953,54ce3fe9,White,Not Hispanic or Latino,2014,2,72,12,0,18,0,11,,,1
+H3884149,54f5b56d,White,Not Hispanic or Latino,2013,1,69,18,66,68,28,66,59,62,1
+H4341040,56d8d9e8,White,Not Hispanic or Latino,2013,1,76,12,14,26,17,51,57,62,1
+H4850503,56d96c7d,White,Not Hispanic or Latino,2014,1,67,18,47,54,16,40,58,58,1
+H3628277,5768adc1,White,Not Hispanic or Latino,2013,2,87,16,,,,,,,1
+H4254654,5769ccdc,White,Not Hispanic or Latino,2017,2,74,18,34,44,9,25,36,25,1
+H7758008,586f51dc,Black or African American,Not-Hispanic,2017,2,75,9,23,48,16,57,51,60,1
+H2508618,58f8ca0a,White,Unavailable or Unknown,2015,2,82,13,13,27,,,,,1
+H3149254,5960b740,White,Unavailable or Unknown,2011,3,68,16,43,52,23,59,60,72,1
+H3928070,5a0ea7e7,White,Not Hispanic or Latino,2016,2,59,12,16,29,5,13,52,42,1
+H3004901,5a323d38,White,Not Hispanic or Latino,2011,2,71,16,,,,,54,46,1
+H3157859,5abdf1a4,White,Unavailable or Unknown,2016,1,70,16,42,52,23,60,58,61,1
+H3715305,5b88c2cb,White,Not Hispanic or Latino,2011,1,59,12,27,38,16,41,,,1
+H3647714,5bccc32a,White,Not Hispanic or Latino,2012,2,67,13,40,49,23,60,53,45,1
+H3814274,5be420c1,White,Not Hispanic or Latino,2015,3,63,18,54,60,19,47,60,68,1
+H3777619,5dc11c73,Black or African American,Not Hispanic or Latino,2014,2,71,12,,,,,,,1
+H3501412,5e5c096d,White,Not Hispanic or Latino,2011,3,71,14,,,,,,,1
+H1351525,6015bf1a,Unavailable or Unknown,Unavailable or Unknown,2013,2,79,11,,,,,56,60,1
+H4951309,605c6b36,White,Not Hispanic or Latino,2007,2,76,16,34,46,2,10,,,1
+H3474861,605f323c,White,Not Hispanic or Latino,2014,1,54,18,61,61,26,56,58,53,1
+H9815461,60ea6b09,White,Hispanic or Latino,2015,2,86,11,27,,10,,,,1
+H3243428,610b677a,White,Not Hispanic or Latino,2013,1,73,,23,35,17,48,53,46,1
+H3353927,6159ef04,White,Not Hispanic or Latino,2013,3,63,13,58,66,18,46,59,67,1
+H3239940,619cbc03,White,Not-Hispanic,2014,1,82,17,34,44,18,48,56,55,1
+H3453235,62cb6642,White,Not Hispanic or Latino,2003,1,62,12,41,51,18,48,59,67,1
+H3123040,62f939af,White,Not Hispanic or Latino,2011,1,68,16,35,45,13,34,60,72,1
+H3741881,63c51e36,White,Not Hispanic or Latino,2010,3,64,16,59,64,18,44,53,40,1
+H3356780,63c88689,White,Not Hispanic or Latino,2015,2,77,16,19,31,5,15,47,41,1
+H3815272,63dfcc1d,Unavailable or Unknown,Declined to Answer,2014,2,75,16,25,35,8,23,31,28,1
+H3645538,657dad43,White,Not Hispanic or Latino,2012,3,73,19,52,57,24,58,59,63,1
+H3851480,6735c6e9,White,Not Hispanic or Latino,2014,2,90,12,27,41,,,,,1
+H3979629,67846f17,White,Not Hispanic or Latino,2014,2,62,18,,,,,51.44023324,47.94658754,1
+H3558361,68b0ac98,White,Not Hispanic or Latino,2004,1,56,12,57,63,25,62,57,53,1
+H3645289,68f977ae,White,Not Hispanic or Latino,2007,1,59,16,33,40,13,31,60,69,1
+H3811740,6b05a8ab,White,Not Hispanic or Latino,2013,1,59,16,34,42,19,46,56,46,1
+H2130689,6b5a620e,White,Not Hispanic or Latino,2012,2,82,16,,,,,,,1
+H2352818,6c247a76,White,Not Hispanic or Latino,2016,2,64,20,19,27,11,25,50,30,1
+H2007558,6c375b02,White,Not Hispanic or Latino,2010,3,80,18,35,43,17,46,60,76,1
+H3437487,6cad86ba,White,Not Hispanic or Latino,2012,2,89,12,19,36,12,42,49,50,1
+H3584402,6cb24145,White,Not Hispanic or Latino,2017,1,76,21,44,50,18,45,58,59,1
+H3923937,6d2abe0a,White,Not Hispanic or Latino,2015,2,85,19,22,34,7,19,52,45,1
+H3526963,6d7dab44,White,Not Hispanic or Latino,2008,1,72,18,,38,23,57,54,44,1
+H3186910,6db199e0,White,Not Hispanic or Latino,2014,1,70,12,13,25,7,19,44,35,1
+H2061535,6dd0774d,Declined to Answer,Declined to Answer,2010,1,64,16,25,33,9,24,37,23,1
+H3467826,6e145718,Asian,Not Hispanic or Latino,2011,1,64,15,36,45,16,42,53,40,1
+H2504620,6ebcb421,White,Not Hispanic or Latino,2015,3,79,18,24,32,16,42,54,48,1
+H3168073,700b300e,White,Not Hispanic or Latino,,3,68,14,45,54,19,52,57,55,1
+H3797469,70372a12,Asian,Not Hispanic or Latino,2012,2,78,12,17,28,4,11,42,37,1
+H2429476,710d5290,White,Not Hispanic or Latino,2015,1,74,16,47,55,21,55,58,64,1
+H4004631,7162e645,Unavailable or Unknown,Unavailable or Unknown,2015,1,80,16,15,27,9,27,25,23,1
+H2416038,719f7531,White,Not Hispanic or Latino,2014,2,77,12,11,22,6,21,45,39,1
+H3596626,71fe08ac,White,Not Hispanic or Latino,2010,2,80,20,27,36,11,29,50,38,1
+H1212704,72000bbb,White,Unavailable or Unknown,2014,2,80,19,10,19,7,17,51.44023324,19,1
+H2153835,720bb019,Unavailable or Unknown,Unavailable or Unknown,2000,1,70,20,33,38,19,48,57,49,1
+H2577474,72b3cd24,White,Declined to Answer,2011,1,73,18,33,38,15,40,57,53,1
+H3601916,72b85e44,White,Not Hispanic or Latino,2015,2,86,16,29,42,8,24,29,34,1
+H3337378,7315caaf,Asian,Not Hispanic or Latino,2012,3,67,20,38,43,11,24,24,12,1
+H3778222,73197b7f,White,Not Hispanic or Latino,2013,2,86,20,,,,,,,1
+H3012264,73e05707,White,Not Hispanic or Latino,2012,3,75,14,31,42,26,66,55,51,1
+H3810133,74be9c6e,White,Not Hispanic or Latino,2010,1,59,16,46,54,16,8,57,49,1
+H3032338,75230f79,White,Not Hispanic or Latino,2009,1,70,13,58,69,15,45,55,49,1
+H2472133,7535459f,White,Not Hispanic or Latino,2016,2,74,20,38,46,12,32,57,50,1
+H2533296,75777eb3,White,Not Hispanic or Latino,2000,1,62,16,,30,,32,,31,1
+H3635965,7722ea5a,White,Not Hispanic or Latino,2010,2,80,18,15,27,9,27,47,40,1
+H3193232,7739adf0,White,Not Hispanic or Latino,2012,1,54,16,44,50,25,59,57,48,1
+H4118883,78dfc293,White,Not Hispanic or Latino,2015,3,88,12,42,56,15,49,57,66,1
+H2618799,79ce1c6a,White,Not Hispanic or Latino,2013,1,75,20,41,46,5,11,54,43,1
+H3632478,79f07caf,White,Not Hispanic or Latino,2005,2,73,18,16,26,10,25,50,37,1
+H2038951,7abd4d0c,White,Not Hispanic or Latino,2014,2,75,18,4,15,6,17,53,42,1
+H3720858,7cb89e3d,White,Not Hispanic or Latino,2014,2,74,16,42,51,9,25,57,56,1
+H3024983,7cba531b,White,Not Hispanic or Latino,2013,2,82,16,,,,,,,1
+H4167848,7d77cb4c,Unavailable or Unknown,Not Reported/Unknown,2014,2,78,19,47,54,16,42,50,38,1
+H3579416,7e41d926,White,Not Hispanic or Latino,2015,3,56,12,25,36,13,34,50,37,1
+H1564701,7e98e726,Native Hawaiian or Other Pacific Islander,Not Hispanic or Latino,2011,3,61,13,,,,,59,65,1
+H3660723,7ebed695,White,Not Hispanic or Latino,2008,3,56,14,38,48,25,62,58,59,1
+H3892428,80da1578,White,Not Hispanic or Latino,2013,2,78,18,17,25,14,37,48,39,1
+H3548218,80e87f59,White,Not Hispanic or Latino,2013,1,54,12,18,30,17,44,54,45,1
+H3507821,813fbdf9,White,Not Hispanic or Latino,2008,2,68,12,8,19,12,37,56,54,1
+H3729861,81c64713,White,Not Hispanic or Latino,2013,3,51,16,73,73,25,57,57,47,1
+H3736266,81e6e556,White,Not Hispanic or Latino,2011,1,81,16,20,30,17,48,55,51,1
+H2000935,825a38ed,White,Not Hispanic or Latino,2014,2,80,14,38,51,2,13,,,1
+H3504300,83a6998d,White,Not Hispanic or Latino,2014,2,78,18,8,20,14.54252199,46,52,43,1
+H4140979,84dd85aa,White,Not Hispanic or Latino,2014,1,69,16,31,41,16,42,59,65,1
+H4140979,84dd85aa,White,Not Hispanic or Latino,2014,1,69,16,31,41,16,42,59,65,1
+H4140979,84dd85aa,White,Not Hispanic or Latino,2014,1,69,16,31,41,16,42,59,65,1
+H4140979,84dd85aa,White,Not Hispanic or Latino,2014,1,69,16,31,41,16,42,59,65,1
+H4140979,84dd85aa,White,Not Hispanic or Latino,2014,1,69,16,31,41,16,42,59,65,1
+H4140979,84dd85aa,White,Not Hispanic or Latino,2014,1,69,16,31,41,16,42,59,65,1
+H4140979,84dd85aa,White,Not Hispanic or Latino,2014,1,69,16,31,41,16,42,59,65,1
+H4140979,84dd85aa,White,Not Hispanic or Latino,2014,1,69,16,31,41,16,42,59,65,1
+H4140979,84dd85aa,White,Not Hispanic or Latino,2014,1,69,16,31,41,16,42,59,65,1
+H4140979,84dd85aa,White,Not Hispanic or Latino,2014,1,69,16,31,41,16,42,59,65,1
+H4140979,84dd85aa,White,Not Hispanic or Latino,2014,1,69,16,31,41,16,42,59,65,1
+H4140979,84dd85aa,White,Not Hispanic or Latino,2014,1,69,16,31,41,16,42,59,65,1
+H4140979,84dd85aa,White,Not Hispanic or Latino,2014,1,69,16,31,41,16,42,59,65,1
+H4140979,84dd85aa,White,Not Hispanic or Latino,2014,1,69,16,31,41,16,42,59,65,1
+H4140979,84dd85aa,White,Not Hispanic or Latino,2014,1,69,16,31,41,16,42,59,65,1
+H4140979,84dd85aa,White,Not Hispanic or Latino,2014,1,69,16,31,41,16,42,59,65,1
+H3560950,85b9d3b7,White,Not Hispanic or Latino,2015,1,79,13,33,43,18,51,48,46,1
+H1551647,85bd792c,Black or African American,Not Hispanic or Latino,2017,1,66,16,30,45,12,41,,,1
+H3634217,85dfb2b9,Unavailable or Unknown,Unavailable or Unknown,2008,2,61,14,9,17,8,21,51,41,1
+H3333782,880e4a2d,White,Not Hispanic or Latino,2016,2,89,15,22,35,15,46,39,35,1
+H3730015,88aa86c3,Unavailable or Unknown,Unavailable or Unknown,2012,2,80,12,39,51,15,47,50,48,1
+H5613417,88e123ff,White,Not Hispanic or Latino,2016,1,78,18,25,32,10,24,50,39,1
+H3839491,88f32bd6,White,Not Hispanic or Latino,2013,1,81,16,28,39,17,50,58,67,1
+H2572368,8973ce3f,Asian,Not Hispanic or Latino,2012,1,65,19,45,49,18,43,24,12,1
+H3239117,89c52579,Asian,Not Hispanic or Latino,2012,1,79,12,45,55,15,47,,,1
+H3041666,8aaad858,White,Not Hispanic or Latino,2010,3,67,16,41,48,19,50,59,64,1
+H3523786,8b274568,Black or African American,Not Hispanic or Latino,2012,1,73,16,,,,,38,30,1
+H4019928,8bac93f0,White,Not-Hispanic,2014,1,72,16,35,44,15,42,,,1
+H3669627,8c6f9c8a,Declined to Answer,Declined to Answer,2012,1,52,16,,,,,60,67,1
+H2638476,8d6396c9,White,Not Hispanic or Latino,2010,1,60,11,30,43,15,43,50,40,1
+H4338348,8e428938,Unavailable or Unknown,Unavailable or Unknown,2017,1,65,12,75,78,20,52,51,45,1
+H3768761,8e645fdb,White,Not Hispanic or Latino,2014,2,64,14,23,33,14.54252199,80,56,50,1
+H3014705,8eac2b2e,White,Not Hispanic or Latino,2009,3,59,12,16,27,17,46,53,43,1
+H2591506,8f09cf18,White,Not Hispanic or Latino,2011,1,65,16,10,17,9,23,51.44023324,16,1
+H5720931,8f5c1896,White,Not Hispanic or Latino,2013,3,65,9,27,43,20,56,55,52,1
+H3684666,904947aa,White,Unavailable or Unknown,2010,1,79,18,41,48,12,35,57,55,1
+H3957897,9084b244,White,Not Hispanic or Latino,2013,2,77,16,58,66,11,30,45,38,1
+H3872029,90b6b441,White,Not Hispanic or Latino,2013,3,59,16,,,,,56,46,1
+H3844429,914f6563,White,Not Hispanic or Latino,2015,1,74,16,,,,,52,44,1
+H3096489,91c8a9fb,White,Not Hispanic or Latino,2010,3,74,20,42,48,18,43,57,51,1
+H2210606,9361b574,White,Not Hispanic or Latino,2013,2,80,18,31,41,13,35,58,64,1
+H3609454,947f3f64,White,Not Hispanic or Latino,2007,2,57,16,16,24,6,12,,,1
+H3817817,94b7a00d,White,Not Hispanic or Latino,2015,1,68,18,41,47,27,62,57,50,1
+H2545398,95c1aeb6,White,Not Hispanic or Latino,2006,2,67,16,11,19,7,16,51,40,1
+H3391623,961c9721,White,Declined to Answer,2012,2,77,18,22,33,5,13,,,1
+H3867221,96479acf,White,Not Hispanic or Latino,2010,2,63,16,12,19,7,15,,,1
+H3731336,9711d2f0,White,Not Hispanic or Latino,,1,74,18,29,40,15,42,52,41,1
+H4255224,973ec2ab,Declined to Answer,Not Hispanic or Latino,2017,3,62,19,,,,,,,1
+H3851434,97b177f4,Asian,Not-Hispanic,2015,1,58,16,46,53,19,46,59,61,1
+H3503765,98d22a5a,White,Not Hispanic or Latino,,1,75,16,37,44,15,42,55,48,1
+H2545291,98fa8b14,White,Not Reported/Unknown,2000,1,48,18,38,42,25,54,60,64,1
+H3614990,99c42b13,Unavailable or Unknown,Unavailable or Unknown,2015,3,76,16,37,44,14,38,60,76,1
+H3828549,99d2d2c4,White,Not Hispanic or Latino,2015,1,75,18,35,44,14,38,59,65,1
+H3658331,9a0a2d0e,White,Not Hispanic or Latino,2012,1,80,16,,,,,,,1
+H4029356,9a8a226d,White,Not Hispanic or Latino,2015,1,83,15,40,51,7,22,59,73,1
+H3826768,9b3dbd64,Unavailable or Unknown,Unavailable or Unknown,2009,2,62,18,27,35,16,39,41,24,1
+H3489274,9c1b1efd,White,Not Hispanic or Latino,2010,3,,,37,45,20,51,60,72,1
+H3991521,9c90e394,Unavailable or Unknown,Unavailable or Unknown,2014,1,67,18,41,47,23,57,59,62,1
+H3490079,9ca50efe,White,Not Hispanic or Latino,2016,3,55,13,22,33,11,27,57,52,1
+H3652671,9cebfe0c,White,Not-Hispanic,2015,3,72,16,45,52,16,43,58,62,1
+H3485780,9d607757,White,Not Hispanic or Latino,2011,2,79,18,,,,,,,1
+H4021012,9e5b2a93,White,Not Hispanic or Latino,2015,1,75,18,34,44,14,38,50,38,1
+H3717905,9e80281a,White,Not Hispanic or Latino,2009,1,63,16,40,46,15,39,51,39,1
+H4080419,9ef3cf5f,White,Not Hispanic or Latino,2012,1,60,12,37,45,12,33,49,39,1
+H2623986,9f4bdcfe,White,Not Hispanic or Latino,2014,1,69,11,27,42,9,30,58,67,1
+H4067661,9f8dab6b,Declined to Answer,Declined to Answer,2016,1,76,18,51,58,12,34,52,42,1
+H3918057,a368e052,White,Not Hispanic or Latino,2014,1,73,16,29,42,17,48,58,63,1
+H3883018,b0565593,White,Not Hispanic or Latino,2015,2,77,12,7,19,6,21,29,35,1
+H2269339,b0e6be24,White,Not Hispanic or Latino,2016,1,82,18,,,,,53,45,1
+H4065431,b169b232,Unavailable or Unknown,Unavailable or Unknown,2014,2,77,16,15,26,10,26,,,1
+H3973630,b19f55e9,White,Not Hispanic or Latino,2008,1,76,16,47,55,16,43,48,41,1
+H2599010,b2f61c2a,White,Unavailable or Unknown,2009,1,77,16,36,46,20,53,58,65,1
+H5493735,b32f5b51,White,Not Hispanic or Latino,2012,1,66,12,20,33,7,19,57,57,1
+H4279100,b42d37e3,Unavailable or Unknown,Unavailable or Unknown,2016,2,78,12,27,40,9,30,35,35,1
+H4062057,b4c196db,Unavailable or Unknown,Unavailable or Unknown,2014,1,66,14,49,55,13,33,57,52,1
+H3580090,b6c19500,White,Not Hispanic or Latino,2013,3,76,17,34,45,19,52,56,51,1
+H2477734,b7ba74a5,White,Not Hispanic or Latino,2010,2,74,19,31,39,7,15,56,48,1
+H3953096,b84b873a,White,Not Hispanic or Latino,2011,1,60,10,24,38,18,49,54,49,1
+H5339292,b89ddd04,White,Not Hispanic or Latino,2016,1,85,14,11,22,7,21,38,36,1
+H3371368,b95d034f,White,Not Hispanic or Latino,2007,2,67,16,3,16,4,8,46,33,1
+H2512533,b9d579dc,White,Not Hispanic or Latino,,2,88,16,34,45,10,28,47,46,1
+H2196188,bdfeeeb5,Unavailable or Unknown,Unavailable or Unknown,2016,1,55,16,50,56,28,62,59,60,1
+H2313589,be439bb2,White,Not Hispanic or Latino,2012,1,59,14,20,29,16,40,54,44,1
+H4095338,be45deb3,White,Not Hispanic or Latino,2016,3,71,16,57,61,20,50,56,50,1
+H3758751,bea57f1a,Unavailable or Unknown,Unavailable or Unknown,2009,1,71,18,24,,4,,55,44,1
+H3219429,bf461a57,White,Not Hispanic or Latino,2012,3,45,19,,,,,59,54,1
+H3895941,bf8d8e90,White,Not Hispanic or Latino,2013,2,64,18,20,28,9,22,54,41,1
+H2765921,bfcd81d2,White,Not Hispanic or Latino,2015,2,80,20,57,61,16,42,50,38,1
+H4019711,bfe03ec9,White,Not Hispanic or Latino,2013,1,68,16,56,63,19,51,59,65,1
+H3074316,c0575ee9,Asian,Not Hispanic or Latino,2013,1,70,16,27,38,13,34,45,34,1
+H2654561,c1dd6860,White,Not Hispanic or Latino,,3,82,16,39,48,19,53,54,52,1
+H8619601,c1eb8d20,White,Not Hispanic or Latino,2017,2,69,13,23,37,5,15,,,1
+H3979125,c2839200,White,Not Hispanic or Latino,2015,3,76,20,50,55,24,56,60,71,1
+H2204274,c474307b,White,Not-Hispanic,2013,2,69,14,18,30,12,34,33,28,1
+H3995561,c511c6e2,Unavailable or Unknown,Unavailable or Unknown,2014,2,75,16,26,37,11,30,45,37,1
+H3718163,c55c4170,Asian,Not Hispanic or Latino,2013,3,78,10,,,,,,,1
+H3172105,c6c6ed2a,White,Not Hispanic or Latino,2012,3,56,14,38,48,27,62,59,62,1
+H4047179,c714eac9,White,Not Hispanic or Latino,2014,1,72,12,24,36,16,45,55,52,1
+H3129007,c778303b,White,Not-Hispanic,2013,1,72,16,40,47,13,33,42,31,1
+H2443583,c7b5d662,Declined to Answer,Not Hispanic or Latino,2015,3,65,16,39,46,23,57,48,36,1
+H2604315,c83e61aa,Declined to Answer,Not Hispanic or Latino,2013,1,75,20,43,50,12,32,58,47,1
+H5637710,c84e10bd,American Indian or Alaska Native,Hispanic or Latino,2011,1,73,18,42,51,18,46,53,41,1
+H4028825,c867b077,White,Not Hispanic or Latino,2015,2,77,13,22,36,10,29,45,41,1
+H3960637,c8ce6db7,White,Not Hispanic or Latino,2014,1,60,13,42,53,17,47,52,41,1
+H3840845,c957994a,White,Not Hispanic or Latino,2011,3,59,20,51,53,20,43,60,64,1
+H2304237,c9ab8bd4,American Indian or Alaska Native,Not Hispanic or Latino,2015,1,63,12,33,42,12,34,53,44,1
+H3695157,c9df145a,White,Not Hispanic or Latino,2013,1,75,18,59,66,14,39,59,67,1
+H3510319,cab577d0,White,Not Hispanic or Latino,2010,2,65,9,9,20,2,12,,,1
+H4047144,cafac0fa,White,Not Hispanic or Latino,2016,2,73,16,39,49,16,43,45,35,1
+H3055224,cbe324cb,White,Not Hispanic or Latino,2013,1,72,12,16,29,13,37,56,56,1
+H8528757,cc1ed458,White,Not Hispanic or Latino,2016,2,67,13,32,43,7,19,53,44,1
+H3976164,cd15b929,White,Not Hispanic or Latino,2009,3,62,18,45,48,29,63,60,68,1
+H2585193,cebb6daf,Black or African American,Not Hispanic or Latino,2015,3,44,19,61,63,21,50,59,65,1
+H3496445,cf0c41f8,White,Not Hispanic or Latino,2013,2,83,12,25,39,15,50,44,41,1
+H2246248,cfaabc27,White,Not Hispanic or Latino,2016,1,71,,36,47,12,36,55,51,1
+H3209427,d1347a31,White,Not Hispanic or Latino,2017,1,66,16,42,50,18,44,59,64,1
+H8685257,d18e348b,White,Not Hispanic or Latino,2009,2,77,16,28,37,8,22,,,1
+H3766797,d2c9d5d7,Unavailable or Unknown,Unavailable or Unknown,2014,1,74,17,26,37,13,34,56,50,1
+H3718554,d32f1db8,White,Not Hispanic or Latino,2013,3,68,16,43,50,24,58,58,61,1
+H7737011,d32f20bc,White,Not-Hispanic,2005,3,62,16,34,42,24,56,58,58,1
+H2518234,d3621489,White,Not Hispanic or Latino,2013,2,90,16,,,,,,,1
+H3849499,d60f1369,White,Not Hispanic or Latino,2011,1,65,11,26,40,20,53,53,46,1
+H4054353,d8010c79,Unavailable or Unknown,Unavailable or Unknown,2000,1,84,12,36,48,13,40,56,62,1
+H3578713,d927e52c,White,Not Hispanic or Latino,2012,1,66,16,43,50,18,44,53,40,1
+H9851835,da028c8c,White,Not Hispanic or Latino,2015,1,48,14,,,,,58,57,1
+H9869067,da30f6d0,White,Not Hispanic or Latino,2010,2,60,12,20,33,4,9,,,1
+H3556270,dc93a59d,White,Not Hispanic or Latino,2011,1,49,16,43,50,19,45,60,66,1
+H4766482,dca9769c,White,Not-Hispanic,2013,3,66,16,,,,,45,29,1
+H2033119,dde4e75c,White,Not Hispanic or Latino,2005,3,79,20,42,50,17,46,59,65,1
+H3868257,de84d652,White,Not-Hispanic,2014,1,65,14,31,41,15,41,55,46,1
+H3831081,dee0a7fe,Unavailable or Unknown,Unavailable or Unknown,2012,2,84,12,38,52,9,31,50,50,1
+H3637767,df74986d,White,Not Hispanic or Latino,2013,3,61,13,36,46,18,47,57,54,1
+H4028936,dfe07e3d,White,Not Hispanic or Latino,2014,1,73,19,47,52,14,35,56,48,1
+H4028936,dfe07e3d,White,Not Hispanic or Latino,2014,1,73,19,47,52,14,35,56,48,1
+H4028936,dfe07e3d,White,Not Hispanic or Latino,2014,1,73,19,47,52,14,35,56,48,1
+H4028936,dfe07e3d,White,Not Hispanic or Latino,2014,1,73,19,47,52,14,35,56,48,1
+H4028936,dfe07e3d,White,Not Hispanic or Latino,2014,1,73,19,47,52,14,35,56,48,1
+H4028936,dfe07e3d,White,Not Hispanic or Latino,2014,1,73,19,47,52,14,35,56,48,1
+H4028936,dfe07e3d,White,Not Hispanic or Latino,2014,1,73,19,47,52,14,35,56,48,1
+H4028936,dfe07e3d,White,Not Hispanic or Latino,2014,1,73,19,47,52,14,35,56,48,1
+H4028936,dfe07e3d,White,Not Hispanic or Latino,2014,1,73,19,47,52,14,35,56,48,1
+H4028936,dfe07e3d,White,Not Hispanic or Latino,2014,1,73,19,47,52,14,35,56,48,1
+H4028936,dfe07e3d,White,Not Hispanic or Latino,2014,1,73,19,47,52,14,35,56,48,1
+H4028936,dfe07e3d,White,Not Hispanic or Latino,2014,1,73,19,47,52,14,35,56,48,1
+H4028936,dfe07e3d,White,Not Hispanic or Latino,2014,1,73,19,47,52,14,35,56,48,1
+H4028936,dfe07e3d,White,Not Hispanic or Latino,2014,1,73,19,47,52,14,35,56,48,1
+H4028936,dfe07e3d,White,Not Hispanic or Latino,2014,1,73,19,47,52,14,35,56,48,1
+H4028936,dfe07e3d,White,Not Hispanic or Latino,2014,1,73,19,47,52,14,35,56,48,1
+H3185160,e11ec1c3,White,Not Hispanic or Latino,2015,2,58,14,15,27,18,45,58,59,1
+H3632102,e26f9745,White,Not Hispanic or Latino,2011,2,70,14,30,41,12,34,54,49,1
+H4000474,e2fa3430,White,Not Hispanic or Latino,2015,1,73,,55,62,16,42,55,45,1
+H3891457,e3a9620c,White,Not Hispanic or Latino,2012,2,82,16,38,48,3,10,49,44,1
+H3342994,e3cf5148,White,Not Hispanic or Latino,2015,1,82,18,39,47,15,43,55,49,1
+H4225760,e45e7ba5,Unavailable or Unknown,Unavailable or Unknown,2015,1,73,19,35,43,11,28,55,43,1
+H4110746,e61f5ce5,Unavailable or Unknown,Unavailable or Unknown,2004,1,56,12,15,29,15,42,56,49,1
+H3552649,e68f59fc,Asian,Not Hispanic or Latino,2008,1,65,12,20,32,13,35,43,33,1
+H4219072,e6a463e2,Unavailable or Unknown,Unavailable or Unknown,2017,1,78,16,50,59,16,43,55,50,1
+H3835907,e6e412e1,White,Not Hispanic or Latino,2011,2,76,16,13,24,3,10,49,41,1
+H3649778,e6edb0c2,White,Not Hispanic or Latino,2013,2,81,12,,,,,,,1
+H4158422,e8eed76f,White,Not Hispanic or Latino,2016,2,72,18,,,,,54,52,1
+H4253559,e9481e8a,White,Not Hispanic or Latino,2016,1,73,17,40,48,20,51,57,54,1
+H3066109,ea26ee6b,White,Unavailable or Unknown,2012,2,70,12,,,,,,,1
+H3930905,ea63ad45,White,Not Hispanic or Latino,2015,1,74,18,25,33,12,33,44,29,1
+H2572616,ebbf4e51,White,Not Hispanic or Latino,2013,3,69,12,55,66,23,63,56,54,1
+H3259691,ebf6890e,White,Not Hispanic or Latino,2007,1,83,19,18,30,14,39,57,56,1
+H3569563,ec260ad7,White,Not Hispanic or Latino,2010,2,71,12,30,43,5,15,39,32,1
+H3796176,ec2ab1a5,Unavailable or Unknown,Unavailable or Unknown,2009,2,83,12,,,,,,,1
+H2047373,ec520e86,Asian,Not Hispanic or Latino,1997,1,64,15.3828125,29,46,16,47,,,1
+H4035581,ed0779c7,Unavailable or Unknown,Unavailable or Unknown,2016,1,72,18,42,49,14,36,47,37,1
+H3627559,edbf7e25,White,Not Hispanic or Latino,2012,2,63,12,33,44,21,57,56,52,1
+H8624985,ee6c727c,Black or African American,Not Hispanic or Latino,2012,2,78,10,9,30,11,48,27,38,1
+H3366795,ef0b4b54,White,Not Hispanic or Latino,2014,2,81,12,28,41,9,31,,,1
+H3427190,f030e36f,Black or African American,Not Hispanic or Latino,2009,2,74,10,45,66,5,29,56,67,1
+H3757818,f16f8df4,White,Not Hispanic or Latino,2011,1,71,16,42,51,23,58,57,54,1
+H3624759,f1d94589,White,Not Hispanic or Latino,2014,1,65,16,40,46,15,40,56,48,1
+H4039298,f1f4bf17,White,Not Hispanic or Latino,2013,1,73,15,27,39,11,32,45,37,1
+H4094035,f25ea891,Unavailable or Unknown,Unavailable or Unknown,2014,1,70,18,50,58,18,45,58,59,1
+H3997194,f3093d9c,White,Not Hispanic or Latino,1997,3,62,19,47,51,26,57,55,39,1
+H3131967,f3165ca7,White,Not Hispanic or Latino,2011,2,82,16,12,21,0,12,51.44023324,20,1
+H4640671,f50d8047,Unavailable or Unknown,Unavailable or Unknown,2015,2,79,16,61,66,13,35,53,46,1
+H3738964,f60acf82,White,Not Hispanic or Latino,2010,2,67,12,58,68,20,52,53,46,1
+H3749401,f60fe19e,White,Not Hispanic or Latino,2013,2,88,13,24,,10,,40,,1
+H4287870,f71dac2b,White,Not Hispanic or Latino,2015,2,69,16,49,54,16,41,56,50,1
+H3690192,f7c04a00,White,Not Hispanic or Latino,2014,1,67,12,30,44,9,28,51,45,1
+H3572080,f83ec145,White,Not Hispanic or Latino,2012,2,84,16,3,18,7,21,,,1
+H0829556,f9b75c4d,White,Not Hispanic or Latino,2013,3,72,18,44,49,23,57,58,60,1
+H2673667,fabf7775,White,Declined to Answer,2017,3,63,12,44,55,17,48,53,44,1
+H3502762,fbd9031c,Asian,Not Hispanic or Latino,,3,49,18,49,50,15,33,46,24,1
+H3968457,fccc049e,Unavailable or Unknown,Unavailable or Unknown,2014,1,63,20,43,46,20,44,55,38,1
+H3606455,fdc1339f,White,Not Hispanic or Latino,2009,1,56,18,45,49,27,58,57,46,1
+H3349247,feb20c60,White,Not Hispanic or Latino,2013,2,77,18,45,50,8,20,50,39,1
+H4238394,fed3cbbb,White,Not Hispanic or Latino,2017,1,57,12,37,45,24,58,57,54,1
+H2061305,ff312c7c,White,Not Hispanic or Latino,2011,1,82,12,37,48,11,39,54,57,1
+H3914361,ffec7957,White,Not Hispanic or Latino,2011,3,68,16,31,39,17,45,55,45,1
+H2554245,fff08c40,White,Not Hispanic or Latino,2013,1,65,12,43,53,16,43,58,65,1
