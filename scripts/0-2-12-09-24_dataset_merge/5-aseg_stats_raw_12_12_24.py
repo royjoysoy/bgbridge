@@ -48,7 +48,7 @@ results = pd.DataFrame(data_dict)
 results_t = results.set_index('Subject_ID').T  # transpose하되 Subject_ID는 컬럼으로 유지
 
 # 결과 저장
-output_path = os.path.expanduser('~/fsgroupAug11/bgbridge/scripts/0-2-12-09-24_dataset_merge/5-aseg_stats_raw.csv')
+output_path = os.path.expanduser('~/fsgroupAug11/bgbridge/scripts/0-2-12-09-24_dataset_merge/5-aseg_stats_raw_12_12_24.csv')
 os.makedirs(os.path.dirname(output_path), exist_ok=True)
 results.to_csv(output_path, index=False)
 
