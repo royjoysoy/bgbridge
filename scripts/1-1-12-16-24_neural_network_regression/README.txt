@@ -1,7 +1,7 @@
 # 12-16-24 Mon (In Korea time) Roy Seo
 # 1-1-12-16-24_neural_network_regression
 
-12-16-24 Mon
+---------------------------  12-16-24 Mon  ----------------------------------
 
 1.1-1-12-16-24_neural_network_regression folder 만듦
 
@@ -148,4 +148,122 @@ CC_Central
 CC_Mid_Anterior	
 CC_Anterior
 
+3. 0-correlations_12_16_24.py로 대충 correlation coefficients와 p-values 봄
+- multiple comparison correction은 안했음
 
+4. 1-nn_regresion12_16_24.py 매우 basic 한 모델로 neural network regression봄
+'''  
+  -- Results 4 --
+Training Loss: [0.6980955600738525, 0.6238742470741272]
+Test Loss: [1.0110758543014526, 0.7723933458328247]
+3/3 [==============================] - 0s 1ms/step
+R-squared for Age_x: 0.3287
+R-squared for Edu_x: 0.0377
+R-squared for FAS_total_raw_x: 0.1041
+R-squared for FAS_total_T_x: 0.1047
+R-squared for Animals_raw_x: 0.0262
+R-squared for Animals_T_x: 0.1599
+R-squared for BNT_totalwstim_raw_x: 0.2597
+R-squared for BNT_totalwstim_T_x: 0.1327
+
+Model Summary:
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ dense (Dense)               (None, 128)               14592     
+                                                                 
+ dropout (Dropout)           (None, 128)               0         
+                                                                 
+ dense_1 (Dense)             (None, 64)                8256      
+                                                                 
+ dropout_1 (Dropout)         (None, 64)                0         
+                                                                 
+ dense_2 (Dense)             (None, 32)                2080      
+                                                                 
+ dense_3 (Dense)             (None, 8)                 264       
+                                                                 
+=================================================================
+Total params: 25,192
+Trainable params: 25,192
+Non-trainable params: 0
+_________________________________________________________________
+'''
+5. 
+4 번 모델은 StandardScaler로 했고 5번은 MinMax Scaler로 했는데 StandardScaler가 성능이 훨신 좋군요
+'''
+  -- Results 5 --
+R-squared for Age_x: 0.0051
+R-squared for Edu_x: 0.0755
+R-squared for FAS_total_raw_x: 0.1052
+R-squared for FAS_total_T_x: 0.1932
+R-squared for Animals_raw_x: 0.0032
+R-squared for Animals_T_x: 0.1433
+R-squared for BNT_totalwstim_raw_x: 0.2327
+R-squared for BNT_totalwstim_T_x: 0.1746
+
+Model Summary:
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ dense (Dense)               (None, 128)               640       
+                                                                 
+ dropout (Dropout)           (None, 128)               0         
+                                                                 
+ dense_1 (Dense)             (None, 64)                8256      
+                                                                 
+ dropout_1 (Dropout)         (None, 64)                0         
+                                                                 
+ dense_2 (Dense)             (None, 32)                2080      
+                                                                 
+ dense_3 (Dense)             (None, 8)                 264       
+                                                                 
+=================================================================
+Total params: 11,240
+Trainable params: 11,240
+Non-trainable params: 0
+_________________________________________________________________
+
+'''
+
+6. language control only regions
+'''
+  -- Results 6 --
+Training Loss: [0.890381932258606, 0.7179588675498962]
+Test Loss: [1.0340725183486938, 0.7910915613174438]
+3/3 [==============================] - 0s 1ms/step
+R-squared for Age_x: 0.0594
+R-squared for Edu_x: 0.0854
+R-squared for FAS_total_raw_x: 0.1578
+R-squared for FAS_total_T_x: 0.2266
+R-squared for Animals_raw_x: 0.0258
+R-squared for Animals_T_x: 0.1692
+R-squared for BNT_totalwstim_raw_x: 0.2587
+R-squared for BNT_totalwstim_T_x: 0.1499
+
+Model Summary:
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ dense (Dense)               (None, 128)               3200      
+                                                                 
+ dropout (Dropout)           (None, 128)               0         
+                                                                 
+ dense_1 (Dense)             (None, 64)                8256      
+                                                                 
+ dropout_1 (Dropout)         (None, 64)                0         
+                                                                 
+ dense_2 (Dense)             (None, 32)                2080      
+                                                                 
+ dense_3 (Dense)             (None, 8)                 264       
+                                                                 
+=================================================================
+Total params: 13,800
+Trainable params: 13,800
+Non-trainable params: 0
+_________________________________________________________________
+
+
+---------------------------  12-17-24 Tues  ----------------------------------

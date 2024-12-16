@@ -26,12 +26,28 @@ output_NPT = [
     'BNT_totalwstim_raw_x', 'BNT_totalwstim_T_x'
 ]
 
-input_region = [
-    # 기존 input_region 리스트 유지
-    'bankssts', 'caudalanteriorcingulate', 'caudalmiddlefrontal', 'cuneus',
-    # ... (나머지 region들)
+input_region = [ 
+# Left and Right DLPFC (Dorsolateral Prefrontal Cortex):
+'rostralmiddlefrontal', 'rostralmiddlefrontal_rh',
+'caudalmiddlefrontal', 'caudalmiddlefrontal_rh',
+# LH, RH inferior frontal:
+'parsopercularis', 'parsopercularis_rh',
+'parsorbitalis', 'parsorbitalis_rh',
+'parstriangularis', 'parstriangularis_rh',
+# LH, RH Lateral orbitofrontal:
+'lateralorbitofrontal', 'lateralorbitofrontal_rh',
+# LH, RH Middle Temporal:
+'middletemporal', 'middletemporal_rh',
+# Pre-SMA (Pre-Supplementary Motor Area):
+'superiorfrontal', 'superiorfrontal_rh', # (부분적으로 포함)
+# LH, RH Precentral:
+'precentral', 'precentral_rh',
+# LH, RH Caudate:
+'Left-Caudate', 'Right-Caudate',
+# ACC (Anterior Cingulate Cortex):
+'rostralanteriorcingulate', 'rostralanteriorcingulate_rh',
+'caudalanteriorcingulate', 'caudalanteriorcingulate_rh'
 ]
-
 # Prepare input (X) and output (y) data
 X = df[input_region].values
 y = df[output_NPT].values

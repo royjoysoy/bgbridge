@@ -1,13 +1,12 @@
 # 12-16-24 Mon In Korea Time Roy Seo
-# The 2nd attempt to run Neural Network Regression
+# The first attempt to run Neural Network Regression
 # Input: lh.aparc.stats, rh.aparc.stats Output: NPTs
-# basic script 2 (w/ MinMaxScaler)
-
+# basic script 3 (w/ standard scalers w/ only language control regions)
 
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import MinMaxScaler  # StandardScaler 대신 MinMaxScaler 사용
+from sklearn.preprocessing import StandardScaler
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout
@@ -18,7 +17,7 @@ import matplotlib.pyplot as plt
 file_path = '/Users/test_terminal/Desktop/bgbridge/scripts/1-1-12-16-24_neural_network_regression/1__6-merged_NPT_w_o_outliers__voxel_w_outliers_12_12_24_manually_cleaned_the_duplicated_rows_12_13_24.csv'
 df = pd.read_csv(file_path)
 
-# Define input and output variables (기존 변수 정의 유지)
+# Define input (y_vars) and output (output_NPT) variables
 output_NPT = [
     'Age_x', 'Edu_x',
     'FAS_total_raw_x', 'FAS_total_T_x',
@@ -26,51 +25,66 @@ output_NPT = [
     'BNT_totalwstim_raw_x', 'BNT_totalwstim_T_x'
 ]
 
-input_region = [
-    # 기존 input_region 리스트 유지
-    'bankssts', 'caudalanteriorcingulate', 'caudalmiddlefrontal', 'cuneus',
-    # ... (나머지 region들)
+input_region = [ 
+# Left and Right DLPFC (Dorsolateral Prefrontal Cortex):
+'rostralmiddlefrontal', 'rostralmiddlefrontal_rh',
+'caudalmiddlefrontal', 'caudalmiddlefrontal_rh',
+# LH, RH inferior frontal:
+'parsopercularis', 'parsopercularis_rh',
+'parsorbitalis', 'parsorbitalis_rh',
+'parstriangularis', 'parstriangularis_rh',
+# LH, RH Lateral orbitofrontal:
+'lateralorbitofrontal', 'lateralorbitofrontal_rh',
+# LH, RH Middle Temporal:
+'middletemporal', 'middletemporal_rh',
+# Pre-SMA (Pre-Supplementary Motor Area):
+'superiorfrontal', 'superiorfrontal_rh', # (부분적으로 포함)
+# LH, RH Precentral:
+'precentral', 'precentral_rh',
+# LH, RH Caudate:
+'Left-Caudate', 'Right-Caudate',
+# ACC (Anterior Cingulate Cortex):
+'rostralanteriorcingulate', 'rostralanteriorcingulate_rh',
+'caudalanteriorcingulate', 'caudalanteriorcingulate_rh'
 ]
+   
+   
 
 # Prepare input (X) and output (y) data
-X = df[input_region].values
-y = df[output_NPT].values
+X = df[input_region].values  # Brain regions as input
+y = df[output_NPT].values  # Cognitive measures as output
 
 # Handle missing values
+# Replace NaN with mean for both input and output
 X = np.nan_to_num(X, nan=np.nanmean(X))
 y = np.nan_to_num(y, nan=np.nanmean(y))
 
 # Split the data
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Apply Min-Max scaling (0-1 정규화)
-scaler_X = MinMaxScaler()
-scaler_y = MinMaxScaler()
+# Scale the data
+scaler_X = StandardScaler()
+scaler_y = StandardScaler()
 
 X_train_scaled = scaler_X.fit_transform(X_train)
 X_test_scaled = scaler_X.transform(X_test)
 y_train_scaled = scaler_y.fit_transform(y_train)
 y_test_scaled = scaler_y.transform(y_test)
 
-# 스케일러 저장 (나중에 역변환을 위해)
-import joblib
-joblib.dump(scaler_X, 'scaler_X.save')
-joblib.dump(scaler_y, 'scaler_y.save')
-
-# Create the model (기존 모델 구조 유지)
+# Create the model
 model = Sequential([
     Dense(128, activation='relu', input_shape=(len(input_region),)),
     Dropout(0.3),
     Dense(64, activation='relu'),
     Dropout(0.2),
     Dense(32, activation='relu'),
-    Dense(len(output_NPT))
+    Dense(len(output_NPT))  # Output layer
 ])
 
 # Compile the model
 model.compile(optimizer='adam', loss='mse', metrics=['mae'])
 
-# Early stopping
+# Early stopping to prevent overfitting
 early_stopping = EarlyStopping(
     monitor='val_loss',
     patience=20,
@@ -94,15 +108,14 @@ test_loss = model.evaluate(X_test_scaled, y_test_scaled, verbose=0)
 print("\nTraining Loss:", train_loss)
 print("Test Loss:", test_loss)
 
-# Make predictions and inverse transform to original scale
+# Make predictions
 y_pred_scaled = model.predict(X_test_scaled)
 y_pred = scaler_y.inverse_transform(y_pred_scaled)
-y_test_original = scaler_y.inverse_transform(y_test_scaled)
 
 # Calculate R-squared for each output variable
 r2_scores = []
 for i in range(len(output_NPT)):
-    correlation_matrix = np.corrcoef(y_test_original[:, i], y_pred[:, i])
+    correlation_matrix = np.corrcoef(y_test[:, i], y_pred[:, i])
     r2 = correlation_matrix[0, 1] ** 2
     r2_scores.append(r2)
     print(f"R-squared for {output_NPT[i]}: {r2:.4f}")
@@ -129,7 +142,7 @@ plt.tight_layout()
 plt.savefig('training_history.png')
 plt.close()
 
-# Save results
+# Save model performance metrics
 results = pd.DataFrame({
     'Variable': output_NPT,
     'R_squared': r2_scores
@@ -142,25 +155,26 @@ model.summary()
 
 # Save the model
 model.save('brain_cognitive_model.h5')
-
-
 '''
   -- Results --
-R-squared for Age_x: 0.0051
-R-squared for Edu_x: 0.0755
-R-squared for FAS_total_raw_x: 0.1052
-R-squared for FAS_total_T_x: 0.1932
-R-squared for Animals_raw_x: 0.0032
-R-squared for Animals_T_x: 0.1433
-R-squared for BNT_totalwstim_raw_x: 0.2327
-R-squared for BNT_totalwstim_T_x: 0.1746
+Training Loss: [0.6980955600738525, 0.6238742470741272]
+Test Loss: [1.0110758543014526, 0.7723933458328247]
+3/3 [==============================] - 0s 1ms/step
+R-squared for Age_x: 0.3287
+R-squared for Edu_x: 0.0377
+R-squared for FAS_total_raw_x: 0.1041
+R-squared for FAS_total_T_x: 0.1047
+R-squared for Animals_raw_x: 0.0262
+R-squared for Animals_T_x: 0.1599
+R-squared for BNT_totalwstim_raw_x: 0.2597
+R-squared for BNT_totalwstim_T_x: 0.1327
 
 Model Summary:
 Model: "sequential"
 _________________________________________________________________
  Layer (type)                Output Shape              Param #   
 =================================================================
- dense (Dense)               (None, 128)               640       
+ dense (Dense)               (None, 128)               14592     
                                                                  
  dropout (Dropout)           (None, 128)               0         
                                                                  
@@ -173,9 +187,8 @@ _________________________________________________________________
  dense_3 (Dense)             (None, 8)                 264       
                                                                  
 =================================================================
-Total params: 11,240
-Trainable params: 11,240
+Total params: 25,192
+Trainable params: 25,192
 Non-trainable params: 0
 _________________________________________________________________
-
 '''
