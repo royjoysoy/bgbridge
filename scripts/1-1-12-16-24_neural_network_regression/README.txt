@@ -266,4 +266,59 @@ Non-trainable params: 0
 _________________________________________________________________
 
 
----------------------------  12-17-24 Tues  ----------------------------------
+---------------------------  12-17-24 Tue  ----------------------------------
+1. Dataset Augmentation에 대해서 공부
+내가 가진 tabula data (means data organized in rows and columns, like what you'd see in a spreadsheet or database table):
+- SMOTE (synthetic Minority Over-sampling technique) 
+   Create synthetic samples by interpolating between existing data points
+   Great for balanced dataset creation
+   Works ell with numerical values
+- ADASYN (Adaptive Synthetic)
+- Random over-sampling
+  Randomly duplicate existing records
+  Easiest methods but can lead to overfitting
+- Adding Gaussian noise to numerical features
+  Add slight Gaussian noise to your exsiting values
+  Keeps the overall distribution while creating new samples
+  Make sure the noise level makes sense for your data range
+- Linear interpolation
+  Create new samples by interpolating between pairs of exsiting samples
+  Helps maintain relationships between features
+
+2. 내가 가진 dataset Summary:
+My output variables (NPTs) include:
+  Demographic data: Age and Education
+  Language tests: FAS (verbal fluency), Animals (semantic fluency), and BNT (Boston Naming Test), both raw and T-scores
+
+My input variables are brain region volumes, focusing on areas involved in language control:
+  DLPFC (executive function and working memory)
+  Inferior frontal regions (including Broca's area)
+  Temporal regions (language comprehension)
+  Motor and pre-motor areas
+  Subcortical structures (Caudate)
+  ACC (cognitive control)
+
+3. 1번중에 어떤 방식으로 augmenting할 지 결정하기에 앞서 data distribution을 보기로 함
+0-basic-statistics-distribution_12_17_24.py
+distribution, skeness 확인후 두가지 방법으로 augmenting하기로 함
+
+
+4. 이렇게 visualize해보니 group별로 matrix를 그려보고 싶었음
+0-1-basic-statistics-distribution-by-group_12_17_24.py
+['syndrome_v2_v2_x'] variables있음 거기서
+group_names = {1: 'MCI', 2: 'Dementia', 3: 'NC'}
+
+5. 3, 4 번 결과가 매우 신기함
+그래서 print되는 것중 신기한것은 GoogleDrive 2004 folder 에 bgbridge/nn/PreNN-Correlation-Coefficient_Very_Interesting 에 폴더를 만들고 pre analysis라는 ppt로 저장함
+가장 신기했던 것 중에 하나는 Caudate은 그룹 별로 봤을때 Dementia그룹에서는 Age와 관련이 없다. 그런데 MCI에서는 상관관계가 있다. 
+
+6. 5-1-MultivariateNormalDataAugmentation_12_17_24.py를 통해
+using multivariate normal distribution Data를 augmenting했다.
+386 -> 772 개로 augmenting
+5_1_augmented_data_multivariate_12_17_24.csv 로 저장
+
+7. 5_1_augmented_data_multivariate_12_17_24.csv 로 neural network 돌려봄
+에러남 내일 고쳐야함
+6-1-nn_regression_standardscaler_aug_LanControlRegionsOnlymultivariate_12_17_24.py
+
+---------------------------  12-18-24 Wed  ----------------------------------
