@@ -17,7 +17,7 @@ def merge_csv_files():
     rh_aparc_file = "~/Desktop/bgbridge/scripts/0-2-12-09-24_dataset_merge/3-transposed_rh_aparc_12_11_24.csv"
     aseg_file = "~/Desktop/bgbridge/scripts/0-2-12-09-24_dataset_merge/5-aseg_stats_raw_12_12_24.csv"
     
-    output_file = "~/Desktop/bgbridge/scripts/0-2-12-09-24_dataset_merge/6-merged_NPT_w_o_outliers__voxel_w_outliers_12_12_24.csv"
+    output_file = "~/Desktop/bgbridge/scripts/0-2-12-09-24_dataset_merge/6-merged_NPT_w_o_outliers__brain_w_outliers_12_12_24.csv"
 
     # Expand user path
     npt_wo_outliers = os.path.expanduser(npt_wo_outliers)
