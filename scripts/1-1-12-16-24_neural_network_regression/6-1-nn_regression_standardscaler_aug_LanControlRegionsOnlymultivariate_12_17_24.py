@@ -13,6 +13,8 @@ import seaborn as sns
 file_path = '5_1_augmented_data_multivariate_12_17_24.csv'
 df = pd.read_csv(file_path)
 
+
+
 # Define input and output variables
 input_region = [
     'rostralmiddlefrontal', 'rostralmiddlefrontal_rh',
@@ -35,9 +37,33 @@ output_NPT = [
     'BNT_totalwstim_raw_x', 'BNT_totalwstim_T_x'
 ]
 
+
+
+# missing value check
+print("Missing values before preprocessing:")
+print(df[input_region + output_NPT].isnull().sum())
+
+
+# 결측치 처리 방법 1: 평균값으로 대체
+# df[input_region] = df[input_region].fillna(df[input_region].mean())
+# df[output_NPT] = df[output_NPT].fillna(df[output_NPT].mean())
+
+# 또는 결측치 처리 방법 2: 중앙값으로 대체 (이상치의 영향을 덜 받음)
+df[input_region] = df[input_region].fillna(df[input_region].median())
+df[output_NPT] = df[output_NPT].fillna(df[output_NPT].median())
+
+# 결측치 처리 후 확인
+print("\nMissing values after preprocessing:")
+print(df[input_region + output_NPT].isnull().sum())
+
+# 결측치 처리 후 데이터 통계 확인
+print("\nData statistics after proprocessing:")
+print(df[input_region + output_NPT].describe())
+
 # Prepare the data
 X = df[input_region]
 y = df[output_NPT]
+
 
 # Split the data
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
