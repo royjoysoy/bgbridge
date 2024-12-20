@@ -453,3 +453,22 @@ L2 추가 후
   - L2 regularization 강도조정 : 더 약한 규제 -kernel_regularizer=l2(0.001)  더 강한 주제 kernel_regularizer=l2(0.05) : 둘 다 더 악화
   - Learning Rate 조정 optimizer=Adam(learning_rate=0.001에서 0.0001로 조정) : 악화
   - 추가적인 모델 단순화: 성능 차이 없어보임
+
+  8. 8-neural-plasticity_12_20_24.py
+  - 갑자기 neural-plasticity가 궁금해져서 논문의 NPT 와 brain regions 기준이 있는지 찾아보았는데 찾지는 못했다. 임의로 다음과 같이 해봄 
+  - MCI, Dementia, NC에서 NPTs 와 Regions of Interest volumen 평균과 std 구한 뒤, 
+  - 1.뇌 볼륨: 환자의 진단 그룹(MCI 또는 Dementia) 평균보다 작은 영역이 하나 이상 있음
+  - 2. NPT 성적: 정상군(NC) 평균에서 1 표준편차를 뺀 값보다 높은 점수를 2개 이상의 테스트에서 획득
+  이 두가지 찾아보는 scripts
+  
+  outputs:
+  
+  8-brain_regions_analysis_12_20_24.png
+  8-left_hemisphere_12_20_24.png
+  8-right_hemisphere_12_20_24.png	
+  8-decreased_regions_12_20_24.png				
+  8-region_npt_pairs_12_20_24.png
+  8-region_npt_pair_statistics_12_20_24.csv
+  8-group_statistics_12_20_24.csv			
+  8-plasticity_results_detailed_12_20_24.csv	
+  
