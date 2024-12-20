@@ -321,4 +321,135 @@ using multivariate normal distribution Data를 augmenting했다.
 에러남 내일 고쳐야함
 6-1-nn_regression_standardscaler_aug_LanControlRegionsOnlymultivariate_12_17_24.py
 
----------------------------  12-18-24 Wed  ----------------------------------
+---------------------------  12-20-24 Fri  ----------------------------------
+1. 학습이 되지 않고  다 NaN으로 찍히는 에러
+- 내가 생각한 에러의 첫번째 이유는 현재 script에서는 missing data points에 대한 명시적인 처리가 없다. 
+- missing data 를 median (chosen for robustness to outliers instead of mean) 으로 대체함
+NaN error가 해결됨
+
+2. NaN error를 고치고나서 overfitting으로 보이는 현상이 나타남 (train loss 는 줄지만, validation loss는 줄지 않음)
+- Loss의 초기값:
+첫 에폭에서 training loss가 1.0603에서 시작, validation loss는 0.9749에서 시작
+- Loss의 변화 패턴:
+Training loss: 1.0603 → 0.4456 (약 58% 감소), Validation loss: 0.9749 → 0.8915 (약 9% 감소)
+- Overfitting 징후:
+Training loss는 계속 감소하는데 validation loss는 거의 감소하지 않고 오히려 약간 증가하는 경향을 보임, 이는 전형적인 overfitting의 징후
+약 16-20 에폭 이후부터 validation loss가 no longer improved
+- 에폭 수 증가에 대해:
+overfitting이 이미 발생하고 있기 때문에, 에폭을 늘리면 overfitting만 더 심해질 것으로 보임
+- Validation loss가 감소하지 않는 이유:
+  1: 모델이 너무 복잡할 수 있다. (현재 128-64-32 뉴런 구조)
+  2: Dropout (0.3, 0.2)이 있지만 충분하지 않을 수 있습니다 (dropout:  학습 과정에서 무작위로 일정 비율의 뉴런을 끄는것 drop out 0.3 30% 뉴런 끄는 것)
+  3: 데이터셋이 작을 수도 있다.
+
+3. 7-1-model-simplication-12-20-24.py
+모델 단순화를 한 후의 결과
+- Loss 패턴 변화:
+  Training loss: 1.6702 → 0.7239 (약 57% 감소)
+  Validation loss: 1.0583 → 0.8621 (약 19% 감소)
+  이전 버전보다 validation loss의 감소폭이 좀 더 커짐
+- R-squared 점수:
+  Training R-squared: 0.25~0.39 범위
+  Test R-squared: -0.02~0.14 범위
+  Animals 관련 변수들의 예측이 상대적으로 더 잘되고 있음
+  하지만 여전히 test set에서의 성능이 좋지 않다.
+- Overfitting 상태:
+  여전히 overfitting이 있지만, 이전 모델보다는 조금 덜함
+  Training과 validation loss의 차이가 이전보다 줄었다
+
+- 이 전 모델에서 R²가 음수가 나온 이유:
+R² = 1 - (SS_res / SS_tot)
+여기서:
+SS_res = Σ(y_true - y_pred)²         # 예측값과 실제값의 차이의 제곱합
+SS_tot = Σ(y_true - y_true_mean)²    # 실제값과 평균의 차이의 제곱합
+
+    R²가 음수가 되는 경우:
+    SS_res > SS_tot 일 때
+    즉, 모델의 예측 오차(SS_res)가 단순히 평균값을 사용했을 때의 오차(SS_tot)보다 더 클 때
+    예를 들어: 실제 값들: [1, 2, 3, 4, 5] (평균 = 3)
+           모델 예측: [0, 0, 6, 6, 6]
+           이 경우 평균(3)을 사용하는 것이 더 나은 예측이 됨
+이 모델에서 R²가 음수가 나온 이유:
+
+모델이 과적합(overfitting)
+복잡한 모델 구조
+높은 학습률
+
+4. 7-2-model-simplification-early-stopping-12-20-24.py
+model simplication + early stopping 추가
+early stopping : training set에 대한 손실 (loss)은 지속적으로 감소하지만, 검증 데이터 (validation set)에 대한 손실은 특정 시점 이후 증가하기 시작할 수 있다. 
+                 validation set에 대한 손실은 특정 시점 이후 증가하기 시작할 수 있다. 
+
+                 검증 손실이 더 이상 감소하지 않거나 악화되기 시작하면, 모델이 훈련 데이터에 과적합되고 있음을 나타냄
+
+                 early stopping은 검증 손실이 일정 횟수 (e.g., 5 epochs) 동안 개선되지 않으면 학습을 멈추고 가장 좋은 검증 성늠을 보였던 지점의 모델을 저장한다. 
+
+- 조기 중단 효과:
+  학습이 57 에폭에서 자동으로 중단됨 (원래 100 에폭 설정)
+  이는 validation loss가 10 에폭 동안 개선되지 않았음을 의미합니다
+성능 비교:
+Before Early Stopping:
+Train R² : 0.25~0.39
+Test R² : -0.02~0.14
+
+After Early Stopping:
+Train R² : 0.17~0.29
+Test R² : 0.05~0.15
+주요 관찰:
+Overfitting이 약간 감소 (train과 test의 R² 차이가 줄어듦)
+Animals 관련 변수들이 여전히 가장 잘 예측됨
+Test set의 음수 R² 값들이 없어졌습니다 (모든 값이 양수)
+
+5. 7-3-model-simplification-early-stopping-L2regularization-12-20-24.py
+- L2 Regularization 
+  기본 개념:
+  모델의 가중치(weights)가 너무 큰 값을 가지지 않도록 제한하는 방법
+  비용 함수(loss function)에 가중치의 제곱항을 추가
+  
+  수학적 표현:
+  새로운 비용 함수 = 원래 비용 함수 + λ * Σ(가중치²)
+  여기서:
+  - λ (lambda): regularization 강도를 조절하는 하이퍼파라미터
+  - Σ(가중치²): 모든 가중치의 제곱의 합
+
+  작동 방식: 
+  # 예시
+  Dense(64, kernel_regularizer=l2(0.01))  # 0.01은 λ 값
+
+  큰 가중치는 더 큰 페널티를 받음 (제곱 때문에)
+모델이 특정 특성에 과도하게 의존하는 것을 방지
+가중치들이 더 균일하게 분포하도록 유도
+
+  효과:
+  모델이 더 단순해짐
+  특정 훈련 데이터에 과도하게 맞추는 것을 방지
+  일반화 성능 향상
+  비유:
+  지도 학습에서 "너무 열심히 외우지 말고, 적당히 이해하면서 공부하라"고 하는 것과 비슷
+  시험 문제와 똑같은 문제만 풀 수 있는 것이 아니라, 비슷한 유형의 다른 문제도 풀 수 있게 됨
+
+L2 Regularization의 λ 값(예제에서는 0.01)은 하이퍼파라미터로, 이 값이:
+크면: 더 강한 규제 → 더 단순한 모델
+작으면: 더 약한 규제 → 더 복잡한 모델이 가능
+
+6. 7-3-model-simplification-early-stopping-L2regularization-12-20-24.py의 결과
+- 모델 성능 변화:
+이전 모델 (Early Stopping만)
+  Train R² : 0.17~0.29
+  Test R² : 0.05~0.15
+L2 추가 후
+  Train R² : 0.19~0.34
+  Test R² : 0.01~0.13
+- 관찰된 변화:
+  Training R²와 Test R² 간의 차이가 여전히 크다 (overfitting)
+  L2 regularization이 overfitting을 완전히 해결하지는 못했다
+  Test R²가 오히려 약간 떨어진 변수들이 있다.
+- Loss 패턴: 
+  초기 loss가 더 높게 시작함 (2.1221)
+  이는 L2 regularization이 가중치에 패널티를 부과하기 때문
+  validation loss가 더 안정적으로 감소하는 패턴을 보임
+
+  7. 7-4-some-tunning-12-20-24.py
+  - L2 regularization 강도조정 : 더 약한 규제 -kernel_regularizer=l2(0.001)  더 강한 주제 kernel_regularizer=l2(0.05) : 둘 다 더 악화
+  - Learning Rate 조정 optimizer=Adam(learning_rate=0.001에서 0.0001로 조정) : 악화
+  - 추가적인 모델 단순화: 성능 차이 없어보임
