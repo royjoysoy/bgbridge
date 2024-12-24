@@ -80,7 +80,7 @@ def plot_bar_charts(corr_matrix, group_name):
         axes[idx].axvline(x=0, color='black', linestyle='-', alpha=0.2)
         
     plt.tight_layout()
-    plt.savefig(f'correlation_bars_{group_name}.png', dpi=300, bbox_inches='tight')
+    plt.savefig(f'0-2-correlation_bars_{group_name}_12_24_24.png', dpi=300, bbox_inches='tight')
     plt.close()
 
 def plot_radar_chart(corr_matrix, group_name):
@@ -106,7 +106,7 @@ def plot_radar_chart(corr_matrix, group_name):
         title=f"Radar Chart of Correlations - {group_name}"
     )
     
-    fig.write_html(f'correlation_radar_{group_name}.html')
+    fig.write_html(f'0-2-correlation_radar_{group_name}_12_24_24.html')
 
 def plot_network_graph(corr_matrix, p_matrix, group_name, p_threshold=0.05):
     """Plot network graph of significant correlations."""
@@ -150,7 +150,7 @@ def plot_network_graph(corr_matrix, p_matrix, group_name, p_threshold=0.05):
     
     plt.title(f"Network of Significant Correlations - {group_name}")
     plt.axis('off')
-    plt.savefig(f'correlation_network_{group_name}.png', dpi=300, bbox_inches='tight')
+    plt.savefig(f'0-2-correlation_network_{group_name}_12_24_24.png', dpi=300, bbox_inches='tight')
     plt.close()
 
 # Process groups

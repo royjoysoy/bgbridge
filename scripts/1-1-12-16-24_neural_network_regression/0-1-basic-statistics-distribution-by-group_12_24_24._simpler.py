@@ -81,7 +81,7 @@ for group, name in groups.items():
     plt.xticks(rotation=90)
     plt.yticks(ticks=np.arange(len(input_region)) + 0.5, labels=annotated_regions, rotation=0)  # Annotated y-axis labels
     plt.tight_layout()
-    plt.savefig(f'correlation_matrix_{name}_12_24_24_annotated.png', dpi=300)
+    plt.savefig(f'0-1-correlation_matrix_{name}_12_24_24_annotated.png', dpi=300)
     plt.close()
 
     # Print summary statistics
