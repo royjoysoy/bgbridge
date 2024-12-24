@@ -188,7 +188,12 @@ def evaluate_performance(y_true, y_pred, test_name):
     print(f"RMSE: {rmse:.4f}")
     print(f"MAE: {mae:.4f}")
     
-    return mse, rmse, mae, r2
+    return {
+        'mse': mse,
+        'rmse': rmse,
+        'mae': mae,
+        'r2': r2
+    }
 
 def plot_prediction_vs_actual(y_true, y_pred, test_name):
     """
