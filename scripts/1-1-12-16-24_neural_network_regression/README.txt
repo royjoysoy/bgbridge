@@ -471,4 +471,87 @@ L2 추가 후
   8-region_npt_pair_statistics_12_20_24.csv
   8-group_statistics_12_20_24.csv			
   8-plasticity_results_detailed_12_20_24.csv	
-  
+
+---------------------------  12-24-24 Fri  ----------------------------------
+1. 0-1-basic-statistics-distribution-by-group_12_24_24._simpler.py
+# 12-24-24 Tue Roy Seo in Korea time 
+# Creates separate correlation matrices for groups: MCI, Dementia, and NC (Normal Cognition)
+# Prints summary statistics for each group, including sample size and average correlation strength
+# Simpler version compared to 0-1-basic-statistics-distribution-by-group_12_17_24.py
+- 왜 simpler 하냐면 NPTs에서 raw scores 없앰 T scores만 사용
+- 왜 simpler 하나면 regions of interest  확 줄임
+    'rostralmiddlefrontal', 'rostralmiddlefrontal_rh',  # DLPFC
+    'parsopercularis', 'parsopercularis_rh',  # Inferior Frontal
+    'lateralorbitofrontal', 'lateralorbitofrontal_rh',  # Lateral Orbitofrontal
+    'middletemporal', 'middletemporal_rh',  # Middle Temporal
+    'paracentral', 'paracentral_rh',  # Pre SMA
+    'precentral', 'precentral_rh',  # Right Precentral
+    'Left-Caudate', 'Right-Caudate',  # Left and Right Caudate
+    'rostralanteriorcingulate', 'rostralanteriorcingulate_rh',  # ACC
+    'caudalanteriorcingulate', 'caudalanteriorcingulate_rh'  # ACC
+
+
+
+2. 0-2-comprehensive_brain_correlation_visualizer_12_24_24.py
+- visualization 다른 방식으로 시도해봄
+
+3. 9-neural-network_cognitive_reserve_analysis_12_24_24.py
+# 입력 레이어
+- brain_regions: 뇌 영역 데이터 (frontal, temporal, parietal, caudate, cingulate 관련 영역들)
+- education: 교육 수준
+- age: 나이
+# 모델 구조  
+Input -> Dense(32) -> Dropout(0.3) -> Dense(16) -> 
+Concatenate with demographic data -> 
+Dense(16) -> Dropout(0.2) -> Dense(8) -> 
+3개의 출력 (FAS, Animals, BNT 점수)
+# 결과
+R² 값이 모두 음수:
+FAS: -0.56
+Animals: -0.27
+BNT: -0.28
+이는 모델의 예측이 단순히 평균값을 사용하는 것보다도 나쁜 성능을 보이고 있다는 의미
+산점도 분석:
+모든 테스트에서 점들이 이상적인 예측선(빨간 점선)에서 크게 벗어나 있다
+예측값이 실제값의 범위보다 좁은 범위에 집중되어 있어 모델이 극단값을 잘 예측하지 못하고 있다
+
+4. 9-1-enhanced_nn_cognitive_reserve_ensemble_12_25_24.py
+주요 개선사항:
+- 모델 단순화:
+각 인지 검사별 독립적인 모델
+BatchNormalization 사용
+더 단순한 레이어 구조
+- 데이터 전처리 강화:
+이상치 처리 (Z-score method)
+상관관계 기반 특징 선택
+결측치 처리 개선
+- 교차 검증:
+5-fold 교차 검증
+각 fold의 성능 추적
+- 앙상블 접근:
+각 fold의 모델 예측 평균
+- 향상된 시각화:
+실제값 vs 예측값 산점도
+통계 정보 포함
+추세선 추가
+# 결과: 
+- FAS 테스트:
+R² = 0.8602 (가장 높은 성능)
+RMSE = 4.1376
+예측값이 실제값과 매우 강한 선형관계를 보임
+- BNT 테스트:
+R² = 0.8577
+RMSE = 4.3925
+중간 범위의 값들에서 특히 정확한 예측을 보임
+- Animals 테스트:
+R² = 0.8571
+RMSE = 5.2302
+전체적으로 안정적인 예측 패턴을 보임
+- 주요 개선 사항:
+이전 모델(R² < 0)에 비해 모든 테스트에서 R² > 0.85로 극적인 성능 향상
+예측값이 실제값과 매우 강한 상관관계를 보임
+RMSE가 크게 감소 (이전 13-16 범위에서 4-5 범위로 개선)
+- 산점도 분석:
+모든 테스트에서 점들이 이상적인 예측선(회색 점선)에 매우 가깝게 분포
+빨간 추세선이 데이터의 전반적인 패턴을 잘 반영
+극단값에서도 비교적 안정적인 예측을 보임
