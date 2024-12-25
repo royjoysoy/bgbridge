@@ -472,7 +472,7 @@ L2 추가 후
   8-group_statistics_12_20_24.csv			
   8-plasticity_results_detailed_12_20_24.csv	
 
----------------------------  12-24-24 Fri  ----------------------------------
+---------------------------  12-24-24 Tue  ----------------------------------
 1. 0-1-basic-statistics-distribution-by-group_12_24_24._simpler.py
 # 12-24-24 Tue Roy Seo in Korea time 
 # Creates separate correlation matrices for groups: MCI, Dementia, and NC (Normal Cognition)
@@ -555,3 +555,113 @@ RMSE가 크게 감소 (이전 13-16 범위에서 4-5 범위로 개선)
 모든 테스트에서 점들이 이상적인 예측선(회색 점선)에 매우 가깝게 분포
 빨간 추세선이 데이터의 전반적인 패턴을 잘 반영
 극단값에서도 비교적 안정적인 예측을 보임
+
+
+---------------------------  12-25-24 Wed  ----------------------------------
+1. 전에 9-1-enhanced_nn_cognitive_reserve_ensemble_12_25_24.py script가 전체 데이터셋에 대한 모든 모델의 앙상블 예측을 보여줍니다.
+콘솔 출력은 각 개별 폴드에서의 성능을 평균낸 것.
+
+그런데!! 결과가 .png 파일에서의 visualization과 콘솔에서 출력결과가 불일치를 보여주었음. 
+
+PNG 파일에 나타난 결과:
+FAS: R² = 0.8502
+BNT: R² = 0.8544
+Animals: R² = 0.8717
+콘솔 출력 결과:
+FAS: R² = -0.2892
+BNT: R² = -0.2555
+Animals: R² = -0.0020
+
+PNG 파일의 결과는 전체 데이터셋에 대한 모든 모델의 앙상블 예측을 보여주고, 콘솔 출력은 각 개별 폴드에서의 성능을 평균낸 것이기때문에 다를 수 있지만 너무 다른것은 이상함
+
+2. 9-2-enhanced_nn_cognitive_reserve_nested_cv_12_25_24.py
+# 전에 9-1-enhanced_nn_cognitive_reserve_ensemble_12_25_24.py script 앙상블 예측결과, 콘솔에 찍히는 결과의 불일치를 줄이기 위해 코드를 개선해봄
+-Overview
+Nested CV 구조:
+외부 CV (5-fold): 모델의 일반화 성능 평가
+내부 CV (5-fold): 각 외부 폴드 내에서 모델 학습 및 검증
+-주요 개선사항:
+각 외부 폴드마다 독립적인 내부 CV 수행
+내부 CV에서 학습된 모델들의 앙상블을 통한 예측
+전체 데이터에 대한 최종 성능과 CV 평균 성능을 모두 보고
+-결과 지표:
+Mean CV Performance: 외부 CV 폴드들의 평균 성능
+Final Performance: 전체 데이터에 대한 최종 성능
+- 데이터 처리:
+이상치 처리와 특징 선택 로직 유지
+각 폴드별 독립적인 스케일링 적용
+
+- 결과
+성능 일관성:
+Mean CV R²와 Final R² 값의 차이가 매우 작아짐:
+FAS: -0.153 vs -0.135
+Animals: 0.059 vs 0.062
+BNT: -0.117 vs -0.099
+
+Nested CV가 더 안정적인 성능 평가를 제공
+
+전반적인 성능:
+Animals 모델만 약간의 양수 R² 값을 보여줌
+FAS와 BNT는 여전히 음수 R² 값을 보임
+RMSE 값은 세 모델 모두 11-13 범위에 있음
+
+모델 성능 개선이 필요한 부분:
+산점도를 보면 예측값이 실제값의 범위를 충분히 반영하지 못함
+특히 높은 값과 낮은 값에서 예측 정확도가 떨어짐
+선형 추세선의 기울기가 매우 완만함 (이상적인 45도 대각선과 큰 차이)
+
+비선형성을 더 활용하도록 결정함 (왜냐면 correlation analyses 했을 때 선형적 관계를 많이 확인하지 못했던 것이 기억남)
+
+3. 9-3-enhanced_nn_cognitive_reserve_deep_nonlinear_12_26_24.py
+- 모델 구조 개선:
+더 깊은 신경망 구조 (3개 블록)
+다양한 활성화 함수 사용 (ReLU, ELU, SELU)
+Skip connection 추가
+L2 정규화 추가
+- 특징 엔지니어링:
+다항식 특징 추가 (2차항)
+상관관계 임계값 완화 (0.1 → 0.05)
+특징 간 상호작용 자동 포착
+- 학습 프로세스 개선:
+Huber Loss 사용 (MSE와 MAE의 장점 결합)
+Learning rate scheduling 적용
+ReduceLROnPlateau 사용
+검증 손실이 개선되지 않을 때 학습률 자동 조정
+초기 학습률: 0.001
+감소 비율(factor): 0.5
+patience: 10
+Early stopping 개선
+patience 증가 (20 → 30)
+최적 가중치 복원
+에포크 수 증가 (200 → 300)
+- 결과 별로 안좋음
+
+4. 9-3-2-enhanced_nn_cognitive_reserve_deep_nonlinear_2nd_set_regions_12_26_24.py
+9-3-enhanced_nn_cognitive_reserve_deep_nonlinear_12_26_24.py
+내가 원하는 영역 (language control regions으로 바꿔봄)
+모든 테스트에서 부정적인 R² 값:
+BNT: -0.9145
+Animals: -0.8869
+FAS: -0.3998
+예측의 특징:
+빨간 추세선이 거의 수평에 가까움
+실제값의 범위(y축)를 제대로 예측하지 못함
+모든 예측이 중간값 근처로 수렴하는 경향
+이전 모델들과 비교:
+비선형성을 강화하고 더 복잡한 구조를 사용했지만 성능이 개선되지 않음
+오히려 일부 메트릭에서는 성능이 더 나빠짐
+가능한 원인들:
+-과적합:
+다항식 특징 추가와 복잡한 모델 구조가 오히려 역효과
+훈련 데이터에 비해 너무 많은 파라미터
+-특징 선택:
+선택된 뇌 영역들이 인지기능을 예측하기에 충분한 정보를 제공하지 못할 수 있음
+다른 중요한 변수들이 필요할 수 있음
+-모델 복잡성:
+Skip connection과 다양한 활성화 함수가 오히려 학습을 불안정하게 만들 수 있음
+-개선 제안:
+더 단순한 모델로 돌아가기
+추가적인 임상 변수 포함 (나이, 교육수준 등)
+특징 선택 방법 재검토
+정규화 강화
+

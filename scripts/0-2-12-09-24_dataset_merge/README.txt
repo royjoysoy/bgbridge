@@ -83,6 +83,7 @@ volume은 outliers가 있는 raw data 여서 with (w_outliers)라고
     이는 데이터의 일관성 측면에서 좋은 결과입니다. 각 Study_ID는 최대 하나의 record_id와만 매칭되므로, 두 데이터셋 간의 관계가 1:1 또는 1:0임을 의미합니다.
 그리고 그전에 6-merged_NPT_w_o_outliers__brain_w_outliers_12_12_24.csv 이 파일에도 중복되어 머지되는 경우가 많았는데 그 중복된 아이디가 혹시 앞의 8자리가 중복된것이 있어서 그런것인지도 RepositorySubjectsPH-CP5192022_DATA_2022-05-19_1329.csv 에서 다시 한번확인함
 한예로 "84dd85aa"이 아이디가 엄청 중복 되어 있었다. 그래서 RepositorySubjectsPH-CP5192022_DATA_2022-05-19_1329.csv 여기에 84dd85aa로 시작하는 아이디가 여럿인지 확인함, 확인 결과 아님
+이 스크립트 7-merged_12_25_24.py로 merge 해서 7-merged_dataset_12_25_24.csv 파일 만듦
 
 
 ----
