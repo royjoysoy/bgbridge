@@ -75,6 +75,16 @@ volume은 outliers가 있는 raw data 여서 with (w_outliers)라고
 6-merged_NPT_w_o_outliers__brain_w_outliers_12_12_24_manually_cleaned_the_duplicated_rows_12_13_24.csv
 이상하게 같은 subjects가 여러 rows에 걸쳐 반복되어있는 현상이 있었다. 그래서 반복되는 rows들을 지웠다. script없이 직접 지움
 
+---- 12-25-24-목요일 
+내가 가지고 있는 "6-merged_NPT_w_o_outliers__brain_w_outliers_12_12_24_manually_cleaned_the_duplicated_rows_12_13_24.csv" 이 파일의 Study ID 와 "RepositorySubjectsPH-CP5192022_DATA_2022-05-19_1329.csv" 파일의 record_id를 비교 확인함
+확인한 결과: 
+    첫 번째 파일에는 385개의 고유한 Study_ID가 있습니다.
+    각 Study_ID에 대해 두 번째 파일의 record_id 앞 8자리와 비교했을 때, 중복되는 케이스(한 Study_ID가 여러 개의 record_id와 매칭되는 경우)는 발견되지 않았습니다.
+    이는 데이터의 일관성 측면에서 좋은 결과입니다. 각 Study_ID는 최대 하나의 record_id와만 매칭되므로, 두 데이터셋 간의 관계가 1:1 또는 1:0임을 의미합니다.
+그리고 그전에 6-merged_NPT_w_o_outliers__brain_w_outliers_12_12_24.csv 이 파일에도 중복되어 머지되는 경우가 많았는데 그 중복된 아이디가 혹시 앞의 8자리가 중복된것이 있어서 그런것인지도 RepositorySubjectsPH-CP5192022_DATA_2022-05-19_1329.csv 에서 다시 한번확인함
+한예로 "84dd85aa"이 아이디가 엄청 중복 되어 있었다. 그래서 RepositorySubjectsPH-CP5192022_DATA_2022-05-19_1329.csv 여기에 84dd85aa로 시작하는 아이디가 여럿인지 확인함, 확인 결과 아님
+
+
 ----
 NPT_copy.csv
 NPT_of_interest_w_o_outliers.csv
@@ -83,4 +93,10 @@ fsgroupAug11_subj_4-1-add-dx-lh_aparc_modified_for_aseg_stats_copy.csv
 handedness_copy.csv
 merged_lh_aparc_copy_raw_including_outliers_12_12_24.csv
 
+Repository Subjects PHI _ DataDictionary_REDCap.pdf : From Carolyn Parsey: Friday May 20, 2022 5:36 AM 한국에서 이메일을 열었으므로 한국시간으로 표기된것일 수 있음
+RepositorySubjectsPH-CP5192022_DATA_2022-05-19_1329.csv: From Carolyn Parsey: Friday May 20, 2022 5:36 AM 한국에서  열었으므로 한국시간으로 표기된것일 수 있음
 이 파일들은 다른 폴더에서 카피해 온 파일들이다. 
+
+
+
+
